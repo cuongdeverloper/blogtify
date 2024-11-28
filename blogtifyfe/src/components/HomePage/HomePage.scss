@@ -1,0 +1,134 @@
+.dashboard {
+  display: flex;
+  height: calc(100vh - 60px); // Subtract the navbar height to fit the viewport
+  margin-top: 60px;          // Push the content below the fixed navbar
+  background: #18191a;
+  color: #e4e6eb;
+  
+    .sidebar {
+      width: 20%;
+      padding: 20px;
+      background: #242526;
+      display: flex;
+      flex-direction: column;
+  
+      .logo {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+  
+        input {
+          margin-left: 10px;
+          padding: 5px;
+          border-radius: 5px;
+          border: none;
+          outline: none;
+        }
+      }
+  
+      .menu {
+        list-style: none;
+        padding: 0;
+  
+        li {
+          padding: 10px 0;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+        }
+      }
+  
+      .shortcuts {
+        margin-top: 20px;
+  
+        h4 {
+          margin-bottom: 10px;
+        }
+  
+        ul {
+          list-style: none;
+          padding: 0;
+  
+          li {
+            padding: 5px 0;
+          }
+        }
+      }
+    }
+  
+    .main {
+      flex: 1;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+  
+      .header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+  
+        input {
+          flex: 1;
+          margin: 0 10px;
+          padding: 5px;
+          border-radius: 5px;
+          border: none;
+          outline: none;
+        }
+  
+        .actions {
+          display: flex;
+  
+          button {
+            margin-left: 10px;
+            padding: 5px 10px;
+            border: none;
+            background: #3a3b3c;
+            color: #e4e6eb;
+            border-radius: 5px;
+          }
+        }
+      }
+  
+      .stories {
+        display: flex;
+        margin-bottom: 20px;
+  
+        .story {
+          background: #3a3b3c;
+          padding: 20px;
+          margin-right: 10px;
+          border-radius: 10px;
+        }
+      }
+  
+      .post {
+        background: #242526;
+        padding: 20px;
+        border-radius: 10px;
+      }
+    }
+  
+    .right-sidebar {
+      width: 20%;
+      padding: 20px;
+      background: #242526;
+  
+      .ads,
+      .contacts {
+        margin-bottom: 20px;
+      }
+  
+      ul {
+        list-style: none;
+        padding: 0;
+  
+        li {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+  .main{
+    margin-top: 16px;
+  }

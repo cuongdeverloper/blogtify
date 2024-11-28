@@ -1,0 +1,58 @@
+// Variables for easy customization
+$primary-color: #007bff;
+$facebook-blue: #1877f2;
+$dark-bg: #242526;
+$icon-size: 25px;
+$input-border-radius: 20px;
+
+.navbar {
+  padding: 10px;
+  background-color: $dark-bg;
+
+  .search-bar {
+    width: 250px;
+    border-radius: $input-border-radius;
+    padding: 5px 15px;
+    border: none;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 5px $primary-color;
+    }
+  }
+
+  .navbar-icons {
+    display: flex;
+    align-items: center;
+
+    .nav-icon {
+      margin: 0 10px;
+      font-size: $icon-size;
+      color: #e4e6eb;
+
+      &:hover {
+        color: $primary-color;
+        cursor: pointer;
+      }
+
+      // Highlight the active icon
+      &.active {
+        color: $facebook-blue;
+      }
+    }
+  }
+}
+
+.navheader-container {
+    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: fixed; // Stays fixed in the viewport
+  top: 0;          // Aligns to the top of the viewport
+  left: 0;
+  width: 100%;     // Spans the full width of the screen
+  height: 60px;    // Define a height for the navbar
+  background: #242526; // Background color to match the dashboard
+  z-index: 1000;   // High z-index to ensure it's above other components
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
