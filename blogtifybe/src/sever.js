@@ -45,7 +45,7 @@ app.use((err, req, res, next) => {
 
  (async () => {
     try {
-    //   await connection();
+      await connection();
       app.listen(port, '0.0.0.0', () => {
         console.log(`Backend app listening on http://localhost:${port}`);
       });
