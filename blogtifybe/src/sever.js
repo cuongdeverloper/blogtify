@@ -9,6 +9,7 @@ const passport = require('passport');
 const cookieParser = require('cookie-parser');
 const port = process.env.PORT || 8888;
 const connection = require('./config/database.js');
+const { routerApi } = require('./routes/route.js');
 
 const app = express();
 app.use(express.json());
@@ -37,6 +38,7 @@ configViewEngine(app);
 app.get("/", (req, res) => {
     res.json("Hello");
 })
+app.use('/', routerApi);
 app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).send('Something broke!');
