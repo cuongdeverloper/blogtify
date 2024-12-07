@@ -7,6 +7,9 @@ import Aos from "aos";
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
 import HomePage from "./components/HomePage/HomePage";
+import SignUp from "./components/Auth/Sign up/SignUp";
+import SignIn from "./components/Auth/Sign in/SignIn";
+import EnterOTPRegister from "./components/Auth/Sign up/OTP/EnterOTPRegister";
 
 
 
@@ -35,8 +38,11 @@ const Layout = () => {
                 <Routes>
                     
                     <Route path="/" element={<HomePage />}>
-                     </Route>
+                    </Route>
                     
+                    <Route path="/signup" element={<SignUp />}/>
+                    <Route path="/signin" element={<SignIn />}/>
+                    <Route path="/otp-verify" element={<EnterOTPRegister />} />
 
                 </Routes>
             </BrowserRouter>

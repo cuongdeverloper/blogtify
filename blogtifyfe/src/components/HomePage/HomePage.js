@@ -2,10 +2,17 @@ import React from "react";
 import "./HomePage.scss";
 import { FaFacebook, FaVideo, FaRegSmile, FaUserCircle, FaHome } from "react-icons/fa";
 import Navbar from "../Navbar/Navbar";
+import { doLogout } from "../redux/action/userAction";
+import { useDispatch } from "react-redux";
 
 const HomePage = () => {
+  const dispatch = useDispatch()
+  const logout = () =>{
+    dispatch(doLogout());
+  }
   return (
     <div className="homepage">
+      <button className="btn btn-secondary" onClick={()=>logout()}>LOGOUT TEST</button>
       <Navbar />
 
       <div className="dashboard">
